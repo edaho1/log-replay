@@ -19,7 +19,7 @@ all: test build
 
 test: $(PKGS)
 
-$(PKGS): golang-test-all-deps cmd/gearcmd/version.go
+$(PKGS): golang-test-all-deps
 	$(call golang-test-all,$@)
 
 build/$(EXECUTABLE)-v$(VERSION)-darwin-amd64:
@@ -39,3 +39,9 @@ release: $(RELEASE_ARTIFACTS)
 
 clean:
 	rm -rf build release
+
+install_deps: $(GOPATH)/bin/glide
+	@$(GOPATH)/bin/glide install
+
+$(GOPATH)/bin/glide:
+	@go get github.com/Masterminds/glide
