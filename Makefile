@@ -19,8 +19,8 @@ all: test build
 
 test: $(PKGS)
 
-$(PKGS): golang-test-all-deps
-	$(call golang-test-all,$@)
+$(PKGS): golang-test-all-strict-deps
+	$(call golang-test-all-strict,$@)
 
 build/$(EXECUTABLE)-v$(VERSION)-darwin-amd64:
 	GOARCH=amd64 GOOS=darwin go build -o "$@/$(EXECUTABLE)" $(PKG)
