@@ -10,7 +10,7 @@ import (
 
 type outputSpeedTest struct {
 	input            []string
-	speed            int
+	speed            int64
 	expectedDuration time.Duration
 }
 

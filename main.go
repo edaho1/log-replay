@@ -12,12 +12,12 @@ import (
 
 var (
 	inputFile string
-	speed     int
+	speed     int64
 )
 
 func init() {
 	flag.StringVar(&inputFile, "i", "", "Input file (if not using stdin)")
-	flag.IntVar(&speed, "s", 100, "Lines per second")
+	flag.Int64Var(&speed, "s", 100, "Lines per second")
 }
 
 func main() {
@@ -50,8 +50,8 @@ func main() {
 	wg.Wait()
 }
 
-func output(wg *sync.WaitGroup, input <-chan string, speed int) {
-	tickerInterval := time.Millisecond * time.Duration(1000/speed)
+func output(wg *sync.WaitGroup, input <-chan string, speed int64) {
+	tickerInterval := time.Nanosecond * time.Duration(1e9/speed)
 	ticker := time.NewTicker(tickerInterval)
 	for line := range input {
 		select {
