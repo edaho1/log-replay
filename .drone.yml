@@ -21,6 +21,7 @@ publish:
     user: Clever
     when:
       branch: master
+  report_card: {}
 script:
-  - make install_deps
-  - make test
+- make install_deps
+- make test
