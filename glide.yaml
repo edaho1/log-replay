@@ -1,5 +1,0 @@
-package: github.com/Clever/log-replay
-import:
-- package: github.com/stretchr/testify
-  subpackages:
-  - assert
