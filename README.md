@@ -3,6 +3,16 @@
 `log-replay` is a tool for replaying a given log at a given speed.  The tool is designed to be CLI friendly, allowing pipes where possible.
 
 ## Installation instruction
+## dependency
+
+Updare the system then install the goland dependency
+```bash
+$ sudo apt-get update && sudo apt-get upgrade -y
+
+```bash
+sudo apt-get install goland
+
+
 As of now I have notice that the test portion of the Makefile is broken so if you try to build using ```bash $ sudo make all or ```bash $ sudo make  the compilation will fail. Instead use the commands below.
 ```bash
 $ sudo make build && sudo make release 
