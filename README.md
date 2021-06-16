@@ -8,19 +8,22 @@
 Update the system then install the golang dependency
 ```bash
 $ sudo apt-get update && sudo apt-get upgrade -y
+```
 
 ```bash
 sudo apt-get install golang
-
+```
 
 As of now I have notice that the test portion of the Makefile is broken so if you try to build using ```bash $ sudo make all or ```bash $ sudo make  the compilation will fail. Instead use the commands below.
 ```bash
 $ sudo make build && sudo make release 
+```
 
 The release will give the compress version of the files while the build will compile the code. If you just want to compile the code then
+
 ```bash 
 $ sudo make build
-
+```
  
 ## Usage
 
