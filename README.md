@@ -5,12 +5,12 @@
 ## Installation instruction
 ## dependency
 
-Updare the system then install the goland dependency
+Update the system then install the golang dependency
 ```bash
 $ sudo apt-get update && sudo apt-get upgrade -y
 
 ```bash
-sudo apt-get install goland
+sudo apt-get install golang
 
 
 As of now I have notice that the test portion of the Makefile is broken so if you try to build using ```bash $ sudo make all or ```bash $ sudo make  the compilation will fail. Instead use the commands below.
